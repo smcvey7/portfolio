@@ -42,3 +42,8 @@
   height: 40px;
   margin: 0 5px;
 }
+
+.column-30{
+  min-width: 40%;
+  max-width: 50% !important;
+}
