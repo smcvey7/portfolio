@@ -7,10 +7,11 @@ function Projects() {
     {
       name: "Chinese Character Test",
       description: "Created using React and Rails, this test allows Chinese teachers and researchers to assess students' character recognition ability and to track information across classes over time.",
-      image: "https://via.placeholder.com/150",
+      image: "./img/character-test-screenshot.png",
       github: "https://github.com/smcvey7/chinese-character-app",
       demo: "https://www.youtube.com/watch?v=rQH2PUf91zA",
-      deployed: "https://www.chinesecharactertest.com/"
+      deployed: "https://www.chinesecharactertest.com/",
+      youtubeEmbeded: "https://www.youtube.com/embed/rQH2PUf91zA?si=VSfJZOg-511tVG30"
     },
     {
       name: "Scamps",
@@ -18,7 +19,8 @@ function Projects() {
       image: "https://via.placeholder.com/150",
       github: "https://github.com/smcvey7/scamps",
       demo: "https://www.youtube.com/watch?v=uwol7GE5Ffo",
-      deployed: ""
+      deployed: "",
+      youtubeEmbeded: "https://www.youtube.com/embed/uwol7GE5Ffo?si=SjNFmsobBVOkgPKf"
     },
     {
       name: "Flashcards",
@@ -26,13 +28,14 @@ function Projects() {
       image: "https://via.placeholder.com/150",
       github: "https://github.com/smcvey7/phase-1-project-final",
       demo: "https://www.youtube.com/watch?v=UEvHHccliTI",
-      deployed: ""
+      deployed: "",
+      youtubeEmbeded: "https://www.youtube.com/embed/UEvHHccliTI?si=rsJw5OMV6YAc5mxt"
     }
   
   ]
 
   const projectTiles = projectList.map((project) => {
-    return <ProjectTile key={project.name} name={project.name} description={project.description} image={project.image} github={project.github} demo={project.demo} deployed={project.deployed} />
+    return <ProjectTile key={project.name} name={project.name} description={project.description} image={project.image} github={project.github} demo={project.demo} deployed={project.deployed} youtubeEmbeded={project.youtubeEmbeded} />
   })
 
 console.log(projectTiles)

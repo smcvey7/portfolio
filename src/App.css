@@ -43,7 +43,24 @@
   margin: 0 5px;
 }
 
+.calligraphy{
+  height: 100px;
+  margin: 0px 20px 0px 20px;
+}
+
 .column-30{
   min-width: 40%;
   max-width: 50% !important;
+}
+
+iframe{
+  width: 100%;
+  min-height: 300px;
+  border: none;
+}
+
+.projectTile{
+  border-style: solid;
+  border-radius: 10px;
+  margin: 10px;
 }
