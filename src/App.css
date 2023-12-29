@@ -38,8 +38,8 @@
 }
 
 .link-icon{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height:30px;
   margin: 0 5px;
 }
 
@@ -51,17 +51,4 @@
 .column-30{
   min-width: 40%;
   max-width: 50% !important;
-}
-
-iframe{
-  width: 100%;
-  min-height: 300px;
-  border: none;
-}
-
-.projectTile{
-  border-style: solid;
-  border-radius: 10px;
-  margin: 10px;
-  height: 100%;
 }
