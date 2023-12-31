@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectTile from "./ProjectTile";
+import styled from "styled-components";
 
 function Projects() {
 
@@ -41,8 +42,8 @@ function Projects() {
 console.log(projectTiles)
 
   return (
-    <div className="container text-center">
-      <div className="row">
+    <StyledDiv className="container d-flex flex-wrap">
+      {/* <div className="row">
         <div className="col">
           <h1>Projects</h1>
           <p>Projects page body content</p>
@@ -50,9 +51,14 @@ console.log(projectTiles)
       </div>
       <div className="row align-items-start" >
         {projectTiles}
-      </div>
-    </div>
+      </div> */}
+      {projectTiles}
+    </StyledDiv>
   );
 }
+
+const StyledDiv = styled('div')`
+  overflow: show;
+`
 
 export default Projects;

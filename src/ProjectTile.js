@@ -20,6 +20,9 @@ const StyledProjectTile = styled('div')`
   border-style: solid;
   border-radius: 10px;
   margin: 10px;
+  min-width: 400px;
+  max-width: 50%;
+  padding: 15px;
 `
 const StyledIFrame = styled('iframe')`
   width: 100%;
