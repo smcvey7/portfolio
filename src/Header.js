@@ -1,11 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
 function Header() {
   return (
     <div className="d-flex flex-horizontal justify-content-between mt-2 align-items-center">
       <div className="d-flex flex-horizontal align-items-center" >
         <img alt="Steven McVey" className="calligraphy" src="./img/calligraphy.png" />
-        <h1>Steven McVey</h1>
+        <div style={{position: "relative", top: "-5px"}} className="text-start">
+          <h1 style={{marginBottom: "0px"}}>Steven McVey</h1>
+          <em>Software Developer</em>
+        </div>
       </div>
       <div>
         <a href="https://www.linkedin.com/in/stevenlmcvey/" ><img alt="LinkedIn icon" className="link-icon" src="./img/linkedin-icon.png" /></a>
@@ -15,5 +19,10 @@ function Header() {
     </div>
   );
 }
+
+const StyledEm = styled("em")`
+  font-size: 1.5rem;
+  margin-top: 0px;
+`;
 
 export default Header;
