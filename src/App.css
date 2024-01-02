@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  color: #6B6E68;
+  font-family: Georgia;
 }
 
 .App-logo {
@@ -51,4 +53,11 @@
 .column-30{
   min-width: 40%;
   max-width: 50% !important;
+}
+
+a.navText{
+  color: #ffffff;
+  font-size: 18px;
+  padding: 0px;
+
 }
