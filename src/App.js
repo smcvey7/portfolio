@@ -7,20 +7,19 @@ import Header from './Header';
 import Footer from './Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import styled from "styled-components";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex flex-column justify-content-between flex-fill">
       <Header />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="projects" element={<Projects />} />
-        
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
-
 export default App;
