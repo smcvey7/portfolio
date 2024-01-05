@@ -8,6 +8,8 @@ import Footer from './Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import styled from "styled-components";
+import CV from './CV';
+import Contact from './Contact';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="projects" element={<Projects />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/cv" element={<CV />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       {/* <Footer /> */}
     </div>
