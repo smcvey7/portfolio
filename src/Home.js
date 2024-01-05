@@ -6,14 +6,14 @@ function Home(){
       <img alt='profile image' style={{minWidth: "20%", maxWidth: "40%", width: "auto", height: "auto"}} src="./img/profile-photo.JPG"/>
       <StyledHomeContent>
         <em>My favorite things...</em><br/>
-        <strong>Technology</strong><br/>
-        <p>something</p>
-        <strong>Language</strong><br/>
-        <p>something</p>
-        <strong>Education</strong>
-        <p>something</p>
-
-
+        <div style={{marginTop: "30px"}}>
+          <strong>Technology</strong><br/>
+          <p>something</p>
+          <strong>Language</strong><br/>
+          <p>something</p>
+          <strong>Education</strong>
+          <p>something</p>
+        </div>
       </StyledHomeContent>
     </StyledHome>
   )
@@ -30,6 +30,7 @@ const StyledHomeContent = styled('div')`
   width: 50%;
   min-height: 300px;
   border: none;
+  text-align: left;
 `
 
 export default Home;
