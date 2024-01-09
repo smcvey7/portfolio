@@ -10,6 +10,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import styled from "styled-components";
 import CV from './CV';
 import Contact from './Contact';
+import Error from './Error';
 
 function App() {
   return (
