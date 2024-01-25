@@ -7,7 +7,6 @@ import Header from './Header';
 import Footer from './Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import styled from "styled-components";
 import CV from './CV';
 import Contact from './Contact';
 import Error from './Error';
@@ -33,7 +32,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/error" element={<Error />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

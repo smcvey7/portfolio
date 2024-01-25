@@ -20,9 +20,4 @@ function Header() {
   );
 }
 
-const StyledEm = styled("em")`
-  font-size: 1.5rem;
-  margin-top: 0px;
-`;
-
 export default Header;
