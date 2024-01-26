@@ -13,27 +13,23 @@ import Error from './Error';
 import Maintenance from './Maintenance';
 
 function App() {
-  const maintenance = true;
 
-  if (maintenance) {
-    return(
-      <Maintenance />
-    )
-  }
-  
-  return (
-    <div className="App d-flex flex-column justify-content-between flex-fill">
-      <Header />
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/cv" element={<CV />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/error" element={<Error />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+  return(
+    <Maintenance />
+  )
+  // return (
+  //   <div className="App d-flex flex-column justify-content-between flex-fill">
+  //     <Header />
+  //     <NavBar />
+  //     <Routes>
+  //       <Route path="/" element={<Home />} />
+  //       <Route path="/projects" element={<Projects />} />
+  //       <Route path="/cv" element={<CV />} />
+  //       <Route path="/contact" element={<Contact />} />
+  //       <Route path="/error" element={<Error />} />
+  //     </Routes>
+  //     <Footer />
+  //   </div>
+  // );
 }
 export default App;
