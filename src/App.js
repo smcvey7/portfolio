@@ -14,8 +14,10 @@ import Maintenance from './Maintenance';
 
 function App() {
 
+  const message = "test"
+
   return(
-    <Maintenance />
+    <Maintenance message={message} />
   )
   // return (
   //   <div className="App d-flex flex-column justify-content-between flex-fill">
