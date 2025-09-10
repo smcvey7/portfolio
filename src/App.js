@@ -16,22 +16,20 @@ function App() {
 
   const message = "test"
 
-  return(
-    <Maintenance message={message} />
-  )
-  // return (
-  //   <div className="App d-flex flex-column justify-content-between flex-fill">
-  //     <Header />
-  //     <NavBar />
-  //     <Routes>
-  //       <Route path="/" element={<Home />} />
-  //       <Route path="/projects" element={<Projects />} />
-  //       <Route path="/cv" element={<CV />} />
-  //       <Route path="/contact" element={<Contact />} />
-  //       <Route path="/error" element={<Error />} />
-  //     </Routes>
-  //     <Footer />
-  //   </div>
-  // );
+  return (
+    <div className="App d-flex flex-column justify-content-between flex-fill">
+      <Header />
+      <NavBar />
+      <Routes>
+        <Route path="*" element={<Maintenance message={message} />} />
+        <Route path="/" element={<Maintenance message={message} />} />
+        <Route path="/projects" element={<Maintenance message={message} />} />
+        <Route path="/cv" element={<Maintenance message={message} />} />
+        <Route path="/contact" element={<Maintenance message={message} />} />
+        <Route path="/error" element={<Maintenance message={message} />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
 export default App;
