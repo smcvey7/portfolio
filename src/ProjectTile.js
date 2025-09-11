@@ -10,10 +10,10 @@ function ProjectTile({name, description, image, github, demo, deployed, youtubeE
   return(
     <StyledProjectTile className="col column-30 projectTile">
       <strong>{name}</strong><br/>
-      <StyledIFrame src={youtubeEmbeded} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></StyledIFrame>
+      <StyledIFrame src={youtubeEmbeded} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></StyledIFrame>
       <p onClick={()=>setClicked(!clicked)} className="text-start" > {clicked ? description : descriptionSummary} </p>
       <div className="d-flex flex-horizontal">
-        <a href={github}><img alt="Github icon" className="link-icon" src="./img/github-icon.png" /></a>
+        <a href={github}><img alt="Github icon" className="link-icon" src="/img/github-icon.png" /></a>
         {deployed ? <a href={deployed}>Try it</a> : null}
       </div>
     </StyledProjectTile>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 function Home(){
   return(
     <StyledHome className='d-flex flex-horizontal justify-content-between'>
-      <img alt='profile' style={{minWidth: "20%", maxWidth: "40%", width: "auto", height: "auto"}} src="./img/profile-photo.JPG"/>
+      <img alt='profile' style={{minWidth: "20%", maxWidth: "40%", width: "auto", height: "auto"}} src="/img/profile-photo.JPG"/>
       <StyledHomeContent>
         <em>My favorite things...</em><br/>
         <div style={{marginTop: "30px"}}>

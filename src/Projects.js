@@ -8,7 +8,7 @@ function Projects() {
     {
       name: "Chinese Character Test",
       description: "Created using React and Rails, this test allows Chinese teachers and researchers to assess students' character recognition ability and to track information across classes over time.",
-      image: "./img/character-test-screenshot.png",
+      image: "/img/character-test-screenshot.png",
       github: "https://github.com/smcvey7/chinese-character-app",
       demo: "https://www.youtube.com/watch?v=rQH2PUf91zA",
       deployed: "https://www.chinesecharactertest.com/",
@@ -39,7 +39,6 @@ function Projects() {
     return <ProjectTile key={project.name} name={project.name} description={project.description} image={project.image} github={project.github} demo={project.demo} deployed={project.deployed} youtubeEmbeded={project.youtubeEmbeded} />
   })
 
-console.log(projectTiles)
 
   return (
     <StyledDiv className="container d-flex flex-wrap">

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function NavBar() {
   return (
-    <StyledNavBar class="navbar navbar-expand-lg bg-body-tertiary justify-content-around">
+    <StyledNavBar className="navbar navbar-expand-lg bg-body-tertiary justify-content-around">
       <div style={{height: "100%"}} className="d-flex flex-horizontal justify-content-around align-items-center">
       <Link
         to="/"

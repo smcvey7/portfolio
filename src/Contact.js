@@ -7,16 +7,16 @@ function Contact() {
       <form action="https://www.actionforms.io/e/r/portfolio-contact-form"
     method="post">
         <div>
-          <label for="name">Name</label>
-          <input type="text" name="name" />
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" />
         </div>
           <div>
-            <label for="email">Email</label>
-            <input type="email" email="email" />
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" />
           </div>
         <div>
-          <label for="message">Message</label>
-          <textarea name="message"></textarea>
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message"></textarea>
         </div>
         <button type="submit">Send form</button>
       </form>
