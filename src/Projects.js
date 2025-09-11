@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectTile from "./ProjectTile";
-import styled from "styled-components";
 
 function Projects() {
 
@@ -11,7 +10,7 @@ function Projects() {
       image: "/img/character-test-screenshot.png",
       github: "https://github.com/smcvey7/chinese-character-app",
       demo: "https://www.youtube.com/watch?v=rQH2PUf91zA",
-      deployed: "https://www.chinesecharactertest.com/",
+      // deployed: "https://www.chinesecharactertest.com/",
       youtubeEmbeded: "https://www.youtube.com/embed/rQH2PUf91zA?si=VSfJZOg-511tVG30"
     },
     {
@@ -41,23 +40,17 @@ function Projects() {
 
 
   return (
-    <StyledDiv className="container d-flex flex-wrap">
-      {/* <div className="row">
-        <div className="col">
-          <h1>Projects</h1>
-          <p>Projects page body content</p>
-        </div>
-      </div>
-      <div className="row align-items-start" >
+    <section className="container-page">
+      <header className="mb-6">
+        <h1 className="text-2xl font-semibold text-slate-900">Projects</h1>
+        <p className="mt-1 text-slate-600">A few things I’ve built recently.</p>
+      </header>
+
+      <div className="flex flex-col gap-6">
         {projectTiles}
-      </div> */}
-      {projectTiles}
-    </StyledDiv>
+      </div>
+    </section>
   );
 }
-
-const StyledDiv = styled('div')`
-  overflow: show;
-`
 
 export default Projects;

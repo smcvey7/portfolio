@@ -1,25 +1,19 @@
 import React from "react"; 
-import styled from "styled-components"; 
 
 function Footer() {
   return (
-    <StyledFooter >
-      <a href="mailto:steven@stevenmcvey.com" >steven@stevenmcvey.com</a>
-    </StyledFooter>
+    <footer className="relative mt-auto w-full bg-slate-900 text-slate-100 text-base py-4">
+      <a
+        className="absolute left-4 top-1/2 -translate-y-1/2 hover:underline"
+        href="mailto:steven@stevenmcvey.com"
+      >
+        steven@stevenmcvey.com
+      </a>
+      <div className="container-page">
+        <p className="text-sm text-slate-400 text-center">Steven McVey LLC © 2025</p>
+      </div>
+    </footer>
   );
 }
-
-const StyledFooter = styled('div')`
-margin-top: 50px;
-margin-bottom: 0px;
-bottom: 0;
-width: 100%;
-background-color: #293241;
-color: #FFFFFF;
-font-size: 20px;
-text-align: left;
-padding-top: 20px;
-min-height: calc(100% - 20px);
-` 
 
 export default Footer;

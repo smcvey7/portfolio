@@ -1,39 +1,82 @@
-import React, {useState} from "react";
-import styled from "styled-components";
+import React, { useMemo, useState } from "react";
 
-function ProjectTile({name, description, image, github, demo, deployed, youtubeEmbeded}){
+function ProjectTile({ name, description, image, github, demo, deployed, youtubeEmbeded }) {
 
-  const [clicked, setClicked] = useState(false)
+  const ActionLink = ({ href, children }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50"
+    >
+      {children}
+    </a>
+  );
 
-  const descriptionSummary = description.slice(0, 100) + "..."
+  const youtubeId = useMemo(() => {
+    if (!youtubeEmbeded) return null;
+    try {
+      const url = new URL(youtubeEmbeded);
+      const parts = url.pathname.split("/");
+      const idx = parts.indexOf("embed");
+      if (idx !== -1 && parts[idx + 1]) {
+        return parts[idx + 1];
+      }
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }, [youtubeEmbeded]);
 
-  return(
-    <StyledProjectTile className="col column-30 projectTile">
-      <strong>{name}</strong><br/>
-      <StyledIFrame src={youtubeEmbeded} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></StyledIFrame>
-      <p onClick={()=>setClicked(!clicked)} className="text-start" > {clicked ? description : descriptionSummary} </p>
-      <div className="d-flex flex-horizontal">
-        <a href={github}><img alt="Github icon" className="link-icon" src="/img/github-icon.png" /></a>
-        {deployed ? <a href={deployed}>Try it</a> : null}
+  const thumbCandidates = useMemo(() => {
+    const list = [];
+    if (image) list.push(image);
+    if (youtubeId) {
+      list.push(
+        `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`,
+        `https://img.youtube.com/vi/${youtubeId}/sddefault.jpg`,
+        `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
+      );
+    }
+    return list;
+  }, [image, youtubeId]);
+
+  const [thumbIndex, setThumbIndex] = useState(0);
+  const imgSrc = thumbCandidates[thumbIndex] || null;
+
+  return (
+    <div className="group bg-white rounded-xl ring-1 ring-slate-200 shadow-sm overflow-hidden flex flex-col">
+      {imgSrc ? (
+        <div className="relative w-full pt-[56.25%] bg-slate-100">
+          <img
+            src={imgSrc}
+            alt={`${name} preview`}
+            className="absolute inset-0 w-full h-full object-contain"
+            loading="lazy"
+            onError={() => setThumbIndex((i) => i + 1)}
+          />
+        </div>
+      ) : null}
+
+      <div className="p-5 flex-1 flex flex-col">
+        <h3 className="text-lg font-semibold text-slate-900">{name}</h3>
+        <p className="mt-2 text-sm text-slate-600 text-left">
+          {description}
+        </p>
+
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          {deployed ? <ActionLink href={deployed}>Live</ActionLink> : null}
+          {demo ? <ActionLink href={demo}>Demo</ActionLink> : null}
+          {github ? (
+            <ActionLink href={github}>
+              <img src="/img/github-icon.png" alt="GitHub" className="w-4 h-4" />
+              Code
+            </ActionLink>
+          ) : null}
+        </div>
       </div>
-    </StyledProjectTile>
-  )
+    </div>
+  );
 }
-
-const StyledProjectTile = styled('div')`
-  border-style: solid;
-  border-radius: 10px;
-  margin: 10px;
-  min-width: 400px;
-  padding: 15px;
-  background-color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 5s;
-`
-const StyledIFrame = styled('iframe')`
-  width: 100%;
-  min-height: 300px;
-  border: none;
-`
 
 export default ProjectTile;

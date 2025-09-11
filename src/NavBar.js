@@ -1,53 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 function NavBar() {
+  const linkClass =
+    "px-4 py-2 rounded-md text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition";
+
   return (
-    <StyledNavBar className="navbar navbar-expand-lg bg-body-tertiary justify-content-around">
-      <div style={{height: "100%"}} className="d-flex flex-horizontal justify-content-around align-items-center">
-      <Link
-        to="/"
-        className="btn btn-lg custom-button navText"
-        role="button"
-      >
-        Home
-      </Link>
-
-      <Link
-        to="/projects"
-        className="btn btn-lg custom-button navText"
-        role="button"
-      >
-        Projects
-      </Link>
-
-      <Link
-        to="/cv"
-        className="btn btn-lg custom-button navText"
-        role="button"
-      >
-        CV
-      </Link>
-
-      <Link
-        to="/contact"
-        className="btn btn-lg custom-button navText"
-        role="button"
-      >
-        Hire Me
-      </Link>
+    <div className="bg-slate-800 text-white h-12">
+      <div className="container-page h-full flex items-center justify-center gap-6">
+        <Link to="/" className={linkClass}>
+          Home
+        </Link>
+        <Link to="/projects" className={linkClass}>
+          Projects
+        </Link>
+        <Link to="/cv" className={linkClass}>
+          CV
+        </Link>
+        <Link to="/contact" className={linkClass}>
+          Hire Me
+        </Link>
       </div>
-      
-    </StyledNavBar>
+    </div>
   );
 }
-
-const StyledNavBar = styled("div")`
-  height: 40px;
-  background-color: #5d7195;
-  color: #ffffff;
-  vertical-align: middle;
-`;
 
 export default NavBar;
