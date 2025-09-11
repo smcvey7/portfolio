@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -42,12 +43,12 @@ function Home() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="inline-flex items-center rounded-md bg-slate-900 text-white px-4 py-2 text-sm font-medium hover:bg-slate-800"
             >
               View Projects
-            </a>
+            </Link>
             <a
               href="/doc/Steven_McVey_Resume.pdf"
               className="inline-flex items-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
