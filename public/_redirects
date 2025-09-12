@@ -1,0 +1,3 @@
+/objectivism/api/* https://objectivism.onrender.com/api/:splat 200
+/objectivism/media/* https://objectivism.onrender.com/media/:splat 200
+/objectivism/* https://objectivism.netlify.app/:splat 200
