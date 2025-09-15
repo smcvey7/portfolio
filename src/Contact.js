@@ -13,10 +13,13 @@ function Contact() {
         </header>
 
         <form
-          action="https://www.actionforms.io/e/r/portfolio-contact-form"
+          name="contact"
           method="post"
+          data-netlify="true"
+          data-netlify-honeypot="website"
           className="bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 p-6 sm:p-8"
         >
+          <input type="hidden" name="form-name" value="contact" />
           {/* Honeypot field for bots */}
           <div className="hidden" aria-hidden="true">
             <label htmlFor="website">Website</label>

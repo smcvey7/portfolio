@@ -28,6 +28,17 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Netlify Forms: hidden form to enable build-time detection -->
+    <form name="contact" method="post" data-netlify="true" netlify-honeypot="website" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none">
+        <label>Website: <input name="website" /></label>
+      </p>
+      <p><label>Name: <input name="name" /></label></p>
+      <p><label>Email: <input type="email" name="email" /></label></p>
+      <p><label>Subject: <input name="subject" /></label></p>
+      <p><label>Message: <textarea name="message"></textarea></label></p>
+    </form>
     <div id="root"></div>
     <!--
       This HTML file is a template.
